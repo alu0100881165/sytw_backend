@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 // @route POST user
 router.post('/', (req, res) => {
   const newUser = new User({
-    nombre: req.body.name,
+    nombre: req.body.nombre,
     password: req.body.password,
     email: req.body.email
   });
