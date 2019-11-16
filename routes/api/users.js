@@ -7,6 +7,7 @@ const User = require('../../models/Users');
 
 // @route GET user
 router.get('/', (req, res) => {
+  console.log('Entro')
   User.find()
     .then(users => res.json(users));
 });
@@ -14,7 +15,7 @@ router.get('/', (req, res) => {
 // @route POST user
 router.post('/', (req, res) => {
   const newUser = new User({
-    name: req.body.name,
+    nombre: req.body.name,
     password: req.body.password,
     email: req.body.email
   });
