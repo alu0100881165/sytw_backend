@@ -19,7 +19,9 @@ router.post('/', (req, res) => {
     password: req.body.password,
     email: req.body.email
   });
-  newUser.save().then(user => res.json(user));
+  newUser.save()
+  .then(user => res.json(user))
+  .catch(err => console.log(err));
 });
 
 module.exports = router;
